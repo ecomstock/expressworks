@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card, { CardHeader, CardMedia, CardContent, CardActions } from 'material-ui/Card';
+import Card, { CardHeader, CardContent } from 'material-ui/Card';
 import Avatar from 'material-ui/Avatar';
 import Typography from 'material-ui/Typography';
 
@@ -37,11 +37,15 @@ const CryptoCard = props => {
 
 }
 
-// CryptoCard.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   description: PropTypes.string.isRequired,
-//   imageLink: PropTypes.string.isRequired,
-// }
+CryptoCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
+  openIssues: PropTypes.string.isRequired,
+  forks: PropTypes.string.isRequired,
+  homepage: PropTypes.string.isRequired
+}
 
 export default CryptoCard;
 

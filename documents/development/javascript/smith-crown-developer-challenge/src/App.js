@@ -3,7 +3,6 @@ import axios from 'axios';
 import './App.css';
 import CssBaseline from 'material-ui/CssBaseline';
 import Card, { CardHeader } from 'material-ui/Card';
-import Typography from 'material-ui/Typography';
 import CardList from "./CardList"
 
 const endpoints = [
@@ -14,8 +13,6 @@ const endpoints = [
   'https://api.github.com/repos/litecoin-project/litecoin',
   'https://api.github.com/repos/input-output-hk/cardano-sl'
 ]
-
-let cardRender;
 
 class App extends Component {
 
@@ -50,9 +47,7 @@ class App extends Component {
     
     return (
       <div>
-
         <CssBaseline />
-
         <Card raised className="main-card">
           <CardHeader 
             classes={{"title": "main-card-header-title", "root": "main-card-header"}} 
@@ -63,7 +58,6 @@ class App extends Component {
             <CardList apiData={this.state.apiData} />
           }
         </Card>
-
       </div>
     );
   }
